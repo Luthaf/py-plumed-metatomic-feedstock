@@ -1,19 +1,19 @@
 {% set name = "py-plumed-metatomic" %}
 
 # update the dev suffix whenever the git_rev changes
-{% set version = "2.10.0" %}
-# {% set git_rev = "00b1cc034c3c66d9d18436518e2b1b11d6266843" %}
+{% set version = "2.10.1.dev1" %}
+{% set git_rev = "09264719e708e8cf26ad9f2b9ec49cddd5650c14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  # git_url: https://github.com/plumed/plumed2.git
-  # git_rev: {{ git_rev }}
-  # depth: 1
-  url: https://github.com/plumed/plumed2/releases/download/v{{ version }}/plumed-src-{{ version }}.tgz
-  sha256: a47791bb0178599743be55416679820bdf0afe7be565644ae98fc23749dee945
+  git_url: https://github.com/plumed/plumed2.git
+  git_rev: {{ git_rev }}
+  depth: 1
+  # url: https://github.com/plumed/plumed2/releases/download/v{{ version }}/plumed-src-{{ version }}.tgz
+  # sha256: a47791bb0178599743be55416679820bdf0afe7be565644ae98fc23749dee945
 
 build:
   number: 0
